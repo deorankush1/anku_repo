@@ -1,0 +1,6 @@
+<?php
+Public Class Curl
+{
+	
+}
+?>
