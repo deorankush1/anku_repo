@@ -1,10 +1,11 @@
 	<?php
-Class Message_Manager
+	require 'Message.php';
+	require 'Curl.php';
+	require 'DOA.php';
+	require 'Show_Message.php';
+
+Public Class Message_Manager()
 {
-	require Message;
-	require DOA;
-	require Curl;
-	require Show_Message;
 
 	$servername = "localhost";
 	$username = "root";
@@ -12,7 +13,7 @@ Class Message_Manager
 
 	try
 	{
-		$conn = new PDO("mysql:host = $servername; dbname = Data",$username,$password);
+		$conn = new PDO("mysql:host = $servername; dbname = myDB",$username,$password);
 		// set the PDO error mode to exception
 		$conn -> setattribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "connected successfully";
